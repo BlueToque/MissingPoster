@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="WantedData"
+    targetNamespace="http://BlueToque.ca/WantedData"
+    elementFormDefault="qualified"
+    xmlns="http://BlueToque.ca/WantedData"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:include id="cfg" schemaLocation="Configuration.xsd" />
+  
+  <xs:element name="WantedData" type="WantedDataType" />
+  
+  <xs:complexType name="WantedDataType">
+    <xs:sequence>
+      <!-- basic stuff -->
+      <xs:element name="CreatedBy" type="xs:string"/>
+      <xs:element name="Created" type="xs:dateTime"/>
+      <xs:element name="ModifiedBy" type="xs:string"/>
+      <xs:element name="Modified" type="xs:dateTime" nillable="true"/>
+
+      <!-- Task information -->
+      <xs:element name="TaskNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="TaskName" type="xs:string" minOccurs="0"/>
+
+      <!-- Subject information -->
+      <xs:element name="FirstName" type="xs:string"/>
+      <xs:element name="LastName" type="xs:string"/>
+      <xs:element name="Age" type="xs:unsignedInt"/>
+      
+      <xs:element name="HeightString" type="xs:string" minOccurs="0"/>
+      <xs:element name="WeightString" type="xs:string" minOccurs="0"/>
+      
+      <xs:element name="Height" type="HeightType" minOccurs="0"/>
+      <xs:element name="Weight" type="WeightType" minOccurs="0"/>
+      <xs:element name="Sex" type="SexType" minOccurs="0"/>
+
+      <xs:element name="Complexion" type="xs:string" minOccurs="0"/>
+      <xs:element name="Clothing" type="xs:string" minOccurs="0"/>
+      <xs:element name="SMT" type="xs:string" minOccurs="0"/>
+      <xs:element name="Health" type="xs:string" minOccurs="0"/>
+
+      <xs:element name="Description" type="xs:string"/>
+
+      <!-- the image -->
+      <xs:element name="Image" type="ImageType"/>
+      
+      <!-- details about task -->
+      <xs:element name="PointLastSeen" type="xs:string"/>
+      <xs:element name="Comment" type="xs:string"/>
+      
+      <xs:element name="Contact" type="ContactType"/>
+      <xs:element name="Header" type="HeaderType"/>
+      <xs:element name="Footer" type="FooterType"/>
+      <xs:any namespace="##any" processContents="lax" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="DOB" type="xs:dateTime" />
+    <xs:attribute name="TaskDate" type="xs:dateTime" />
+    <xs:attribute name="DateLastSeen" type="xs:date" />
+    <xs:attribute name="TimeLastSeen" type="xs:time" />
+
+  </xs:complexType>
+
+  <xs:simpleType name="SexType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Female" />
+      <xs:enumeration value="Male" />
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Other" />
+      <xs:enumeration value="Blank" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="HeightType">
+    <xs:attribute name="Value" type="xs:float"/>
+    <xs:attribute name="Units" type="LengthUnits"/>
+  </xs:complexType>
+
+  <xs:complexType name="WeightType">
+    <xs:attribute name="Value" type="xs:float"/>
+    <xs:attribute name="Units" type="WeightUnits"/>
+  </xs:complexType>
+
+  <xs:simpleType name="LengthUnits">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Feet" />
+      <xs:enumeration value="Metres" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="WeightUnits">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pounds" />
+      <xs:enumeration value="Kilograms" />
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

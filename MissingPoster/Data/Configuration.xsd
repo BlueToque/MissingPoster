@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="WantedData"
+    targetNamespace="http://BlueToque.ca/WantedData"
+    elementFormDefault="qualified"
+    xmlns="http://BlueToque.ca/WantedData"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Configuration" type="Configuration"/>
+  <xs:complexType name="Configuration">
+    <xs:sequence>
+      <xs:element name="Header" type="HeaderType"/>
+      <xs:element name="Footer" type="FooterType"/>
+      <xs:element name="Contact" type="ContactType"/>
+      <xs:any namespace="##any" processContents="lax" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="HeaderType">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string"/>
+      <xs:element name="PhoneNumber" type="xs:string"/>
+      <xs:element name="EmailAddress" type="xs:string"/>
+      <xs:element name="ImageBytes" type="xs:base64Binary"/>
+      <xs:any namespace="##any" processContents="lax" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="FooterType">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string"/>
+      <xs:element name="PhoneNumber" type="xs:string"/>
+      <xs:element name="EmailAddress" type="xs:string"/>
+      <xs:element name="ImageBytes" type="xs:base64Binary"/>
+      <xs:any namespace="##any" processContents="lax" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ContactType">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string"/>
+      <xs:element name="PhoneNumber" type="xs:string"/>
+      <xs:element name="EmailAddress" type="xs:string"/>
+      <xs:any namespace="##any" processContents="lax" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ImageType">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string"/>
+      <xs:element name="Path" type="xs:string"/>
+      <xs:element name="ImageBytes" type="xs:base64Binary"/>
+      <xs:any namespace="##any" processContents="lax" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

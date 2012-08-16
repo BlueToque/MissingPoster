@@ -1,2 +1,5 @@
 syntax: glob
 WantedPosterSetup/Debug/*
+*.suo
+WantedPoster/bin/*
+WantedPoster/obj/*

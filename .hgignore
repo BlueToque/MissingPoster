@@ -1,5 +1,4 @@
 syntax: glob
-WantedPosterSetup/Debug/*
 *.suo
-WantedPoster/bin/*
-WantedPoster/obj/*
+MissingPoster/bin/*
+MissingPoster/obj/*

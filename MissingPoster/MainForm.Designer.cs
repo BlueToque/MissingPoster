@@ -71,6 +71,7 @@
             this.wordToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.excelToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.loadImageToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.cutToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.copyToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.pasteToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -99,6 +100,23 @@
             this.timeLastSeenDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.headerTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.imageTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mainContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.previewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.applyFooterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             pathLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
             lastNameLabel = new System.Windows.Forms.Label();
@@ -124,6 +142,7 @@
             this.lastSeenGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerTypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageTypeBindingSource)).BeginInit();
+            this.mainContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // pathLabel
@@ -319,6 +338,7 @@
             this.wordToolStripButton,
             this.excelToolStripButton,
             this.toolStripSeparator,
+            this.loadImageToolStripButton,
             this.cutToolStripButton,
             this.copyToolStripButton,
             this.pasteToolStripButton,
@@ -412,6 +432,14 @@
             this.toolStripSeparator.Name = "toolStripSeparator";
             resources.ApplyResources(this.toolStripSeparator, "toolStripSeparator");
             // 
+            // loadImageToolStripButton
+            // 
+            this.loadImageToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.loadImageToolStripButton.Image = global::MissingPoster.Properties.Resources.image__plus;
+            resources.ApplyResources(this.loadImageToolStripButton, "loadImageToolStripButton");
+            this.loadImageToolStripButton.Name = "loadImageToolStripButton";
+            this.loadImageToolStripButton.Click += new System.EventHandler(this.browseButton_Click);
+            // 
             // cutToolStripButton
             // 
             this.cutToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -462,6 +490,7 @@
             // 
             // chooseReportToolStripComboBox
             // 
+            this.chooseReportToolStripComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.chooseReportToolStripComboBox.Name = "chooseReportToolStripComboBox";
             resources.ApplyResources(this.chooseReportToolStripComboBox, "chooseReportToolStripComboBox");
             // 
@@ -619,11 +648,126 @@
             this.imageTypeBindingSource.DataMember = "Image";
             this.imageTypeBindingSource.DataSource = this.wantedDataTypeBindingSource;
             // 
+            // mainContextMenuStrip
+            // 
+            this.mainContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem,
+            this.openToolStripMenuItem,
+            this.saveToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.printToolStripMenuItem,
+            this.previewToolStripMenuItem,
+            this.exportAsToolStripMenuItem,
+            this.toolStripSeparator5,
+            this.applyFooterToolStripMenuItem,
+            this.loadImageToolStripMenuItem,
+            this.toolStripSeparator6,
+            this.exitToolStripMenuItem});
+            this.mainContextMenuStrip.Name = "mainContextMenuStrip";
+            resources.ApplyResources(this.mainContextMenuStrip, "mainContextMenuStrip");
+            // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.Image = global::MissingPoster.Properties.Resources.NewDocumentHS;
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            resources.ApplyResources(this.newToolStripMenuItem, "newToolStripMenuItem");
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Image = global::MissingPoster.Properties.Resources.openHS;
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Image = global::MissingPoster.Properties.Resources.saveHS;
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            resources.ApplyResources(this.saveToolStripMenuItem, "saveToolStripMenuItem");
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
+            // 
+            // printToolStripMenuItem
+            // 
+            this.printToolStripMenuItem.Image = global::MissingPoster.Properties.Resources.PrintHS;
+            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
+            resources.ApplyResources(this.printToolStripMenuItem, "printToolStripMenuItem");
+            // 
+            // previewToolStripMenuItem
+            // 
+            this.previewToolStripMenuItem.Image = global::MissingPoster.Properties.Resources.PrintPreviewHS;
+            this.previewToolStripMenuItem.Name = "previewToolStripMenuItem";
+            resources.ApplyResources(this.previewToolStripMenuItem, "previewToolStripMenuItem");
+            // 
+            // exportAsToolStripMenuItem
+            // 
+            this.exportAsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.imageToolStripMenuItem,
+            this.pDFToolStripMenuItem,
+            this.wordToolStripMenuItem,
+            this.excelToolStripMenuItem});
+            this.exportAsToolStripMenuItem.Name = "exportAsToolStripMenuItem";
+            resources.ApplyResources(this.exportAsToolStripMenuItem, "exportAsToolStripMenuItem");
+            // 
+            // imageToolStripMenuItem
+            // 
+            this.imageToolStripMenuItem.Image = global::MissingPoster.Properties.Resources.picture;
+            this.imageToolStripMenuItem.Name = "imageToolStripMenuItem";
+            resources.ApplyResources(this.imageToolStripMenuItem, "imageToolStripMenuItem");
+            // 
+            // pDFToolStripMenuItem
+            // 
+            this.pDFToolStripMenuItem.Image = global::MissingPoster.Properties.Resources.document_pdf;
+            this.pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
+            resources.ApplyResources(this.pDFToolStripMenuItem, "pDFToolStripMenuItem");
+            // 
+            // wordToolStripMenuItem
+            // 
+            this.wordToolStripMenuItem.Image = global::MissingPoster.Properties.Resources.page_white_word;
+            this.wordToolStripMenuItem.Name = "wordToolStripMenuItem";
+            resources.ApplyResources(this.wordToolStripMenuItem, "wordToolStripMenuItem");
+            // 
+            // excelToolStripMenuItem
+            // 
+            this.excelToolStripMenuItem.Image = global::MissingPoster.Properties.Resources.page_white_excel;
+            this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
+            resources.ApplyResources(this.excelToolStripMenuItem, "excelToolStripMenuItem");
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
+            // 
+            // applyFooterToolStripMenuItem
+            // 
+            this.applyFooterToolStripMenuItem.Name = "applyFooterToolStripMenuItem";
+            resources.ApplyResources(this.applyFooterToolStripMenuItem, "applyFooterToolStripMenuItem");
+            this.applyFooterToolStripMenuItem.Click += new System.EventHandler(this.applyFooterToolStripMenuItem_Click);
+            // 
+            // loadImageToolStripMenuItem
+            // 
+            this.loadImageToolStripMenuItem.Image = global::MissingPoster.Properties.Resources.image__plus;
+            this.loadImageToolStripMenuItem.Name = "loadImageToolStripMenuItem";
+            resources.ApplyResources(this.loadImageToolStripMenuItem, "loadImageToolStripMenuItem");
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            resources.ApplyResources(this.toolStripSeparator6, "toolStripSeparator6");
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
+            // 
             // MainForm
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ContextMenuStrip = this.mainContextMenuStrip;
             this.Controls.Add(this.lastSeenGroupBox);
             this.Controls.Add(this.subjectGroupBox);
             this.Controls.Add(this.toolStrip);
@@ -652,6 +796,7 @@
             this.lastSeenGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerTypeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageTypeBindingSource)).EndInit();
+            this.mainContextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -714,6 +859,24 @@
         private System.Windows.Forms.ToolStripComboBox chooseReportToolStripComboBox;
         private System.Windows.Forms.ToolStripButton imageToolStripButton;
         private System.Windows.Forms.ComboBox sexComboBox;
+        private System.Windows.Forms.ToolStripButton loadImageToolStripButton;
+        private System.Windows.Forms.ContextMenuStrip mainContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem applyFooterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem previewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportAsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem imageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pDFToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem excelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripMenuItem loadImageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 

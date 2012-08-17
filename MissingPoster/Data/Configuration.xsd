@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema id="WantedData"
-    targetNamespace="http://BlueToque.ca/WantedData"
+    targetNamespace="http://BlueToque.ca/MissingData"
     elementFormDefault="qualified"
-    xmlns="http://BlueToque.ca/WantedData"
+    xmlns="http://BlueToque.ca/MissingData"
     xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:element name="Configuration" type="Configuration"/>

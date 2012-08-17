@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label nameLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigForm));
             System.Windows.Forms.Label emailAddressLabel;
             System.Windows.Forms.Label phoneNumberLabel;
             System.Windows.Forms.Label nameLabel1;
             System.Windows.Forms.Label emailAddressLabel1;
             System.Windows.Forms.Label phoneNumberLabel1;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
@@ -67,62 +67,37 @@
             // 
             // nameLabel
             // 
-            nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(53, 22);
+            resources.ApplyResources(nameLabel, "nameLabel");
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(38, 13);
-            nameLabel.TabIndex = 0;
-            nameLabel.Text = "Name:";
             // 
             // emailAddressLabel
             // 
-            emailAddressLabel.AutoSize = true;
-            emailAddressLabel.Location = new System.Drawing.Point(15, 48);
+            resources.ApplyResources(emailAddressLabel, "emailAddressLabel");
             emailAddressLabel.Name = "emailAddressLabel";
-            emailAddressLabel.Size = new System.Drawing.Size(76, 13);
-            emailAddressLabel.TabIndex = 2;
-            emailAddressLabel.Text = "Email Address:";
             // 
             // phoneNumberLabel
             // 
-            phoneNumberLabel.AutoSize = true;
-            phoneNumberLabel.Location = new System.Drawing.Point(10, 74);
+            resources.ApplyResources(phoneNumberLabel, "phoneNumberLabel");
             phoneNumberLabel.Name = "phoneNumberLabel";
-            phoneNumberLabel.Size = new System.Drawing.Size(81, 13);
-            phoneNumberLabel.TabIndex = 4;
-            phoneNumberLabel.Text = "Phone Number:";
             // 
             // nameLabel1
             // 
-            nameLabel1.AutoSize = true;
-            nameLabel1.Location = new System.Drawing.Point(53, 22);
+            resources.ApplyResources(nameLabel1, "nameLabel1");
             nameLabel1.Name = "nameLabel1";
-            nameLabel1.Size = new System.Drawing.Size(38, 13);
-            nameLabel1.TabIndex = 0;
-            nameLabel1.Text = "Name:";
             // 
             // emailAddressLabel1
             // 
-            emailAddressLabel1.AutoSize = true;
-            emailAddressLabel1.Location = new System.Drawing.Point(15, 48);
+            resources.ApplyResources(emailAddressLabel1, "emailAddressLabel1");
             emailAddressLabel1.Name = "emailAddressLabel1";
-            emailAddressLabel1.Size = new System.Drawing.Size(76, 13);
-            emailAddressLabel1.TabIndex = 2;
-            emailAddressLabel1.Text = "Email Address:";
             // 
             // phoneNumberLabel1
             // 
-            phoneNumberLabel1.AutoSize = true;
-            phoneNumberLabel1.Location = new System.Drawing.Point(10, 74);
+            resources.ApplyResources(phoneNumberLabel1, "phoneNumberLabel1");
             phoneNumberLabel1.Name = "phoneNumberLabel1";
-            phoneNumberLabel1.Size = new System.Drawing.Size(81, 13);
-            phoneNumberLabel1.TabIndex = 4;
-            phoneNumberLabel1.Text = "Phone Number:";
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.pictureBox);
             this.groupBox1.Controls.Add(phoneNumberLabel);
             this.groupBox1.Controls.Add(this.phoneNumberTextBox);
@@ -130,34 +105,22 @@
             this.groupBox1.Controls.Add(this.emailAddressTextBox);
             this.groupBox1.Controls.Add(nameLabel);
             this.groupBox1.Controls.Add(this.nameTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(12, 118);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(484, 124);
-            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Agency";
             // 
             // pictureBox
             // 
-            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.pictureBox, "pictureBox");
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox.Location = new System.Drawing.Point(392, 20);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(85, 85);
-            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox.TabIndex = 6;
             this.pictureBox.TabStop = false;
             this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // phoneNumberTextBox
             // 
-            this.phoneNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.phoneNumberTextBox, "phoneNumberTextBox");
             this.phoneNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.headerTypeBindingSource, "PhoneNumber", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.phoneNumberTextBox.Location = new System.Drawing.Point(97, 71);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(288, 20);
-            this.phoneNumberTextBox.TabIndex = 5;
             // 
             // headerTypeBindingSource
             // 
@@ -170,56 +133,38 @@
             // 
             // emailAddressTextBox
             // 
-            this.emailAddressTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.emailAddressTextBox, "emailAddressTextBox");
             this.emailAddressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.headerTypeBindingSource, "EmailAddress", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.emailAddressTextBox.Location = new System.Drawing.Point(97, 45);
             this.emailAddressTextBox.Name = "emailAddressTextBox";
-            this.emailAddressTextBox.Size = new System.Drawing.Size(288, 20);
-            this.emailAddressTextBox.TabIndex = 3;
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.nameTextBox, "nameTextBox");
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.headerTypeBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nameTextBox.Location = new System.Drawing.Point(97, 19);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(288, 20);
-            this.nameTextBox.TabIndex = 1;
             // 
             // openImageFileDialog
             // 
             this.openImageFileDialog.DefaultExt = "*.jpg";
-            this.openImageFileDialog.Filter = "Image Files |*.png;*.jpg;*.bmp;*.gif";
-            this.openImageFileDialog.Title = "Open Image";
+            resources.ApplyResources(this.openImageFileDialog, "openImageFileDialog");
             // 
             // contactGroupBox
             // 
-            this.contactGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.contactGroupBox, "contactGroupBox");
             this.contactGroupBox.Controls.Add(phoneNumberLabel1);
             this.contactGroupBox.Controls.Add(this.phoneNumberTextBox1);
             this.contactGroupBox.Controls.Add(emailAddressLabel1);
             this.contactGroupBox.Controls.Add(this.emailAddressTextBox1);
             this.contactGroupBox.Controls.Add(nameLabel1);
             this.contactGroupBox.Controls.Add(this.nameTextBox1);
-            this.contactGroupBox.Location = new System.Drawing.Point(12, 12);
             this.contactGroupBox.Name = "contactGroupBox";
-            this.contactGroupBox.Size = new System.Drawing.Size(484, 100);
-            this.contactGroupBox.TabIndex = 1;
             this.contactGroupBox.TabStop = false;
-            this.contactGroupBox.Text = "Contact";
             // 
             // phoneNumberTextBox1
             // 
-            this.phoneNumberTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.phoneNumberTextBox1, "phoneNumberTextBox1");
             this.phoneNumberTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactTypeBindingSource, "PhoneNumber", true));
-            this.phoneNumberTextBox1.Location = new System.Drawing.Point(97, 71);
             this.phoneNumberTextBox1.Name = "phoneNumberTextBox1";
-            this.phoneNumberTextBox1.Size = new System.Drawing.Size(380, 20);
-            this.phoneNumberTextBox1.TabIndex = 5;
             // 
             // contactTypeBindingSource
             // 
@@ -228,64 +173,45 @@
             // 
             // emailAddressTextBox1
             // 
-            this.emailAddressTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.emailAddressTextBox1, "emailAddressTextBox1");
             this.emailAddressTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactTypeBindingSource, "EmailAddress", true));
-            this.emailAddressTextBox1.Location = new System.Drawing.Point(97, 45);
             this.emailAddressTextBox1.Name = "emailAddressTextBox1";
-            this.emailAddressTextBox1.Size = new System.Drawing.Size(380, 20);
-            this.emailAddressTextBox1.TabIndex = 3;
             // 
             // nameTextBox1
             // 
-            this.nameTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.nameTextBox1, "nameTextBox1");
             this.nameTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactTypeBindingSource, "Name", true));
-            this.nameTextBox1.Location = new System.Drawing.Point(97, 19);
             this.nameTextBox1.Name = "nameTextBox1";
-            this.nameTextBox1.Size = new System.Drawing.Size(380, 20);
-            this.nameTextBox1.TabIndex = 1;
             // 
             // okButton
             // 
-            this.okButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            resources.ApplyResources(this.okButton, "okButton");
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.okButton.Location = new System.Drawing.Point(176, 253);
             this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(75, 23);
-            this.okButton.TabIndex = 2;
-            this.okButton.Text = "OK";
             this.okButton.UseVisualStyleBackColor = true;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // cancelButton
             // 
-            this.cancelButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            resources.ApplyResources(this.cancelButton, "cancelButton");
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(257, 253);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(75, 23);
-            this.cancelButton.TabIndex = 3;
-            this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // ConfigForm
             // 
             this.AcceptButton = this.okButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(508, 288);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.contactGroupBox);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConfigForm";
             this.ShowInTaskbar = false;
-            this.Text = "Configuration";
             this.Load += new System.EventHandler(this.ConfigForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

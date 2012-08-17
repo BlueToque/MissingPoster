@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label pathLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.Label firstNameLabel;
             System.Windows.Forms.Label lastNameLabel;
             System.Windows.Forms.Label descriptionLabel;
@@ -43,7 +44,6 @@
             System.Windows.Forms.Label heightStringLabel;
             System.Windows.Forms.Label weightStringLabel;
             System.Windows.Forms.Label label1;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.browseButton = new System.Windows.Forms.Button();
             this.pathTextBox = new System.Windows.Forms.TextBox();
             this.wantedDataTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -128,154 +128,88 @@
             // 
             // pathLabel
             // 
-            pathLabel.AutoSize = true;
-            pathLabel.Location = new System.Drawing.Point(12, 35);
+            resources.ApplyResources(pathLabel, "pathLabel");
             pathLabel.Name = "pathLabel";
-            pathLabel.Size = new System.Drawing.Size(73, 16);
-            pathLabel.TabIndex = 3;
-            pathLabel.Text = "Image File:";
             // 
             // firstNameLabel
             // 
-            firstNameLabel.AutoSize = true;
-            firstNameLabel.Location = new System.Drawing.Point(6, 34);
+            resources.ApplyResources(firstNameLabel, "firstNameLabel");
             firstNameLabel.Name = "firstNameLabel";
-            firstNameLabel.Size = new System.Drawing.Size(75, 16);
-            firstNameLabel.TabIndex = 4;
-            firstNameLabel.Text = "First Name:";
             // 
             // lastNameLabel
             // 
-            lastNameLabel.AutoSize = true;
-            lastNameLabel.Location = new System.Drawing.Point(5, 66);
+            resources.ApplyResources(lastNameLabel, "lastNameLabel");
             lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new System.Drawing.Size(73, 16);
-            lastNameLabel.TabIndex = 5;
-            lastNameLabel.Text = "Last Name:";
             // 
             // descriptionLabel
             // 
-            descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(2, 211);
+            resources.ApplyResources(descriptionLabel, "descriptionLabel");
             descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(76, 16);
-            descriptionLabel.TabIndex = 10;
-            descriptionLabel.Text = "Description:";
             // 
             // dOBLabel
             // 
-            dOBLabel.AutoSize = true;
-            dOBLabel.Location = new System.Drawing.Point(40, 96);
+            resources.ApplyResources(dOBLabel, "dOBLabel");
             dOBLabel.Name = "dOBLabel";
-            dOBLabel.Size = new System.Drawing.Size(37, 16);
-            dOBLabel.TabIndex = 12;
-            dOBLabel.Text = "DOB:";
             // 
             // ageLabel
             // 
-            ageLabel.AutoSize = true;
-            ageLabel.Location = new System.Drawing.Point(267, 96);
+            resources.ApplyResources(ageLabel, "ageLabel");
             ageLabel.Name = "ageLabel";
-            ageLabel.Size = new System.Drawing.Size(35, 16);
-            ageLabel.TabIndex = 14;
-            ageLabel.Text = "Age:";
             // 
             // pointLastSeenLabel
             // 
-            pointLastSeenLabel.AutoSize = true;
-            pointLastSeenLabel.Location = new System.Drawing.Point(15, 25);
+            resources.ApplyResources(pointLastSeenLabel, "pointLastSeenLabel");
             pointLastSeenLabel.Name = "pointLastSeenLabel";
-            pointLastSeenLabel.Size = new System.Drawing.Size(51, 16);
-            pointLastSeenLabel.TabIndex = 18;
-            pointLastSeenLabel.Text = "Where:";
             // 
             // nameLabel
             // 
-            nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(58, 25);
+            resources.ApplyResources(nameLabel, "nameLabel");
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(46, 16);
-            nameLabel.TabIndex = 0;
-            nameLabel.Text = "Name:";
             // 
             // emailAddressLabel
             // 
-            emailAddressLabel.AutoSize = true;
-            emailAddressLabel.Location = new System.Drawing.Point(10, 54);
+            resources.ApplyResources(emailAddressLabel, "emailAddressLabel");
             emailAddressLabel.Name = "emailAddressLabel";
-            emailAddressLabel.Size = new System.Drawing.Size(94, 16);
-            emailAddressLabel.TabIndex = 2;
-            emailAddressLabel.Text = "Email Address:";
             // 
             // phoneNumberLabel
             // 
-            phoneNumberLabel.AutoSize = true;
-            phoneNumberLabel.Location = new System.Drawing.Point(7, 83);
+            resources.ApplyResources(phoneNumberLabel, "phoneNumberLabel");
             phoneNumberLabel.Name = "phoneNumberLabel";
-            phoneNumberLabel.Size = new System.Drawing.Size(97, 16);
-            phoneNumberLabel.TabIndex = 4;
-            phoneNumberLabel.Text = "Phone Number:";
             // 
             // dateLastSeenLabel
             // 
-            dateLastSeenLabel.AutoSize = true;
-            dateLastSeenLabel.Location = new System.Drawing.Point(20, 56);
+            resources.ApplyResources(dateLastSeenLabel, "dateLastSeenLabel");
             dateLastSeenLabel.Name = "dateLastSeenLabel";
-            dateLastSeenLabel.Size = new System.Drawing.Size(46, 16);
-            dateLastSeenLabel.TabIndex = 18;
-            dateLastSeenLabel.Text = "When:";
             // 
             // heightStringLabel
             // 
-            heightStringLabel.AutoSize = true;
-            heightStringLabel.Location = new System.Drawing.Point(28, 124);
+            resources.ApplyResources(heightStringLabel, "heightStringLabel");
             heightStringLabel.Name = "heightStringLabel";
-            heightStringLabel.Size = new System.Drawing.Size(49, 16);
-            heightStringLabel.TabIndex = 14;
-            heightStringLabel.Text = "Height:";
             // 
             // weightStringLabel
             // 
-            weightStringLabel.AutoSize = true;
-            weightStringLabel.Location = new System.Drawing.Point(24, 153);
+            resources.ApplyResources(weightStringLabel, "weightStringLabel");
             weightStringLabel.Name = "weightStringLabel";
-            weightStringLabel.Size = new System.Drawing.Size(53, 16);
-            weightStringLabel.TabIndex = 15;
-            weightStringLabel.Text = "Weight:";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(227, 123);
+            resources.ApplyResources(label1, "label1");
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(34, 16);
-            label1.TabIndex = 18;
-            label1.Text = "Sex:";
             // 
             // browseButton
             // 
-            this.browseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.browseButton.Location = new System.Drawing.Point(615, 29);
-            this.browseButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            resources.ApplyResources(this.browseButton, "browseButton");
             this.browseButton.Name = "browseButton";
-            this.browseButton.Size = new System.Drawing.Size(87, 28);
-            this.browseButton.TabIndex = 1;
-            this.browseButton.Text = "Browse";
-            this.toolTip.SetToolTip(this.browseButton, "Browse for subject image");
+            this.toolTip.SetToolTip(this.browseButton, resources.GetString("browseButton.ToolTip"));
             this.browseButton.UseVisualStyleBackColor = true;
             this.browseButton.Click += new System.EventHandler(this.browseButton_Click);
             // 
             // pathTextBox
             // 
-            this.pathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.pathTextBox, "pathTextBox");
             this.pathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.wantedDataTypeBindingSource, "Image.Path", true));
-            this.pathTextBox.Location = new System.Drawing.Point(91, 32);
-            this.pathTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pathTextBox.Name = "pathTextBox";
             this.pathTextBox.ReadOnly = true;
-            this.pathTextBox.Size = new System.Drawing.Size(517, 23);
-            this.pathTextBox.TabIndex = 0;
             // 
             // wantedDataTypeBindingSource
             // 
@@ -283,117 +217,76 @@
             // 
             // firstNameTextBox
             // 
-            this.firstNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.firstNameTextBox, "firstNameTextBox");
             this.firstNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.wantedDataTypeBindingSource, "FirstName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.firstNameTextBox.Location = new System.Drawing.Point(83, 30);
-            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(290, 23);
-            this.firstNameTextBox.TabIndex = 2;
-            this.toolTip.SetToolTip(this.firstNameTextBox, "First name, include middle names and \r\nother names subject knows.");
+            this.toolTip.SetToolTip(this.firstNameTextBox, resources.GetString("firstNameTextBox.ToolTip"));
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.lastNameTextBox, "lastNameTextBox");
             this.lastNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.wantedDataTypeBindingSource, "LastName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.lastNameTextBox.Location = new System.Drawing.Point(83, 62);
-            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(290, 23);
-            this.lastNameTextBox.TabIndex = 3;
-            this.toolTip.SetToolTip(this.lastNameTextBox, "Subject\'s last name");
+            this.toolTip.SetToolTip(this.lastNameTextBox, resources.GetString("lastNameTextBox.ToolTip"));
             // 
             // openImageFileDialog
             // 
             this.openImageFileDialog.DefaultExt = "*.jpg";
-            this.openImageFileDialog.Filter = "Image Files |*.png;*.jpg;*.bmp;*.gif";
-            this.openImageFileDialog.Title = "Open Image";
+            resources.ApplyResources(this.openImageFileDialog, "openImageFileDialog");
             // 
             // descriptionTextBox
             // 
             this.descriptionTextBox.AcceptsReturn = true;
             this.descriptionTextBox.AcceptsTab = true;
-            this.descriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.descriptionTextBox, "descriptionTextBox");
             this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.wantedDataTypeBindingSource, "Description", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.descriptionTextBox.Location = new System.Drawing.Point(83, 179);
-            this.descriptionTextBox.MaxLength = 4000;
-            this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.descriptionTextBox.Size = new System.Drawing.Size(290, 111);
-            this.descriptionTextBox.TabIndex = 4;
-            this.toolTip.SetToolTip(this.descriptionTextBox, "General description of the subject\r\nUse this field to include details that are no" +
-        "t covered \r\nby other fields on this form. ");
+            this.toolTip.SetToolTip(this.descriptionTextBox, resources.GetString("descriptionTextBox.ToolTip"));
             // 
             // dOBDateTimePicker
             // 
-            this.dOBDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dOBDateTimePicker.CustomFormat = "MMM dd yyyy";
+            resources.ApplyResources(this.dOBDateTimePicker, "dOBDateTimePicker");
             this.dOBDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dOBDateTimePicker.Location = new System.Drawing.Point(83, 92);
             this.dOBDateTimePicker.Name = "dOBDateTimePicker";
             this.dOBDateTimePicker.ShowCheckBox = true;
-            this.dOBDateTimePicker.Size = new System.Drawing.Size(178, 23);
-            this.dOBDateTimePicker.TabIndex = 7;
-            this.toolTip.SetToolTip(this.dOBDateTimePicker, "Subject\'s Date of Birth, leave blank if unknown");
+            this.toolTip.SetToolTip(this.dOBDateTimePicker, resources.GetString("dOBDateTimePicker.ToolTip"));
             this.dOBDateTimePicker.ValueChanged += new System.EventHandler(this.dOBDateTimePicker_ValueChanged);
             // 
             // ageNumericUpDown
             // 
             this.ageNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.wantedDataTypeBindingSource, "Age", true));
-            this.ageNumericUpDown.Location = new System.Drawing.Point(308, 94);
+            resources.ApplyResources(this.ageNumericUpDown, "ageNumericUpDown");
             this.ageNumericUpDown.Maximum = new decimal(new int[] {
             150,
             0,
             0,
             0});
             this.ageNumericUpDown.Name = "ageNumericUpDown";
-            this.ageNumericUpDown.Size = new System.Drawing.Size(61, 23);
-            this.ageNumericUpDown.TabIndex = 8;
-            this.toolTip.SetToolTip(this.ageNumericUpDown, "Subject age, estimate if necessary. If Date of Birth is \r\nknown, use that and the" +
-        " age will be calculated.");
+            this.toolTip.SetToolTip(this.ageNumericUpDown, resources.GetString("ageNumericUpDown.ToolTip"));
             // 
             // pointLastSeenTextBox
             // 
-            this.pointLastSeenTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.pointLastSeenTextBox, "pointLastSeenTextBox");
             this.pointLastSeenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.wantedDataTypeBindingSource, "PointLastSeen", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.pointLastSeenTextBox.Location = new System.Drawing.Point(72, 22);
             this.pointLastSeenTextBox.Name = "pointLastSeenTextBox";
-            this.pointLastSeenTextBox.Size = new System.Drawing.Size(297, 23);
-            this.pointLastSeenTextBox.TabIndex = 6;
             // 
             // contactGroupBox
             // 
-            this.contactGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.contactGroupBox, "contactGroupBox");
             this.contactGroupBox.Controls.Add(phoneNumberLabel);
             this.contactGroupBox.Controls.Add(this.phoneNumberTextBox);
             this.contactGroupBox.Controls.Add(emailAddressLabel);
             this.contactGroupBox.Controls.Add(this.emailAddressTextBox);
             this.contactGroupBox.Controls.Add(nameLabel);
             this.contactGroupBox.Controls.Add(this.nameTextBox);
-            this.contactGroupBox.Location = new System.Drawing.Point(12, 366);
             this.contactGroupBox.Name = "contactGroupBox";
-            this.contactGroupBox.Size = new System.Drawing.Size(314, 128);
-            this.contactGroupBox.TabIndex = 9;
             this.contactGroupBox.TabStop = false;
-            this.contactGroupBox.Text = "Contact";
             // 
             // phoneNumberTextBox
             // 
-            this.phoneNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.phoneNumberTextBox, "phoneNumberTextBox");
             this.phoneNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactTypeBindingSource, "PhoneNumber", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.phoneNumberTextBox.Location = new System.Drawing.Point(110, 80);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(190, 23);
-            this.phoneNumberTextBox.TabIndex = 2;
             // 
             // contactTypeBindingSource
             // 
@@ -402,23 +295,15 @@
             // 
             // emailAddressTextBox
             // 
-            this.emailAddressTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.emailAddressTextBox, "emailAddressTextBox");
             this.emailAddressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactTypeBindingSource, "EmailAddress", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.emailAddressTextBox.Location = new System.Drawing.Point(110, 51);
             this.emailAddressTextBox.Name = "emailAddressTextBox";
-            this.emailAddressTextBox.Size = new System.Drawing.Size(190, 23);
-            this.emailAddressTextBox.TabIndex = 1;
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.nameTextBox, "nameTextBox");
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactTypeBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nameTextBox.Location = new System.Drawing.Point(110, 22);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(190, 23);
-            this.nameTextBox.TabIndex = 0;
             // 
             // toolStrip
             // 
@@ -442,57 +327,41 @@
             this.configToolStripButton,
             this.toolStripLabel1,
             this.chooseReportToolStripComboBox});
-            this.toolStrip.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.toolStrip, "toolStrip");
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(723, 25);
-            this.toolStrip.TabIndex = 22;
-            this.toolStrip.Text = "toolStrip1";
             // 
             // newToolStripButton
             // 
             this.newToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.newToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton.Image")));
-            this.newToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this.newToolStripButton, "newToolStripButton");
             this.newToolStripButton.Name = "newToolStripButton";
-            this.newToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.newToolStripButton.Text = "&New";
             this.newToolStripButton.Click += new System.EventHandler(this.newToolStripButton_Click);
             // 
             // openToolStripButton
             // 
             this.openToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.openToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripButton.Image")));
-            this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this.openToolStripButton, "openToolStripButton");
             this.openToolStripButton.Name = "openToolStripButton";
-            this.openToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.openToolStripButton.Text = "&Open";
             this.openToolStripButton.Click += new System.EventHandler(this.openToolStripButton_Click);
             // 
             // saveToolStripButton
             // 
             this.saveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.saveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton.Image")));
-            this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this.saveToolStripButton, "saveToolStripButton");
             this.saveToolStripButton.Name = "saveToolStripButton";
-            this.saveToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.saveToolStripButton.Text = "&Save";
             this.saveToolStripButton.Click += new System.EventHandler(this.saveToolStripButton_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             // 
             // printToolStripButton
             // 
             this.printToolStripButton.AutoToolTip = false;
             this.printToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.printToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripButton.Image")));
-            this.printToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this.printToolStripButton, "printToolStripButton");
             this.printToolStripButton.Name = "printToolStripButton";
-            this.printToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.printToolStripButton.Text = "&Print";
-            this.printToolStripButton.ToolTipText = "Print the missing poster";
             this.printToolStripButton.Click += new System.EventHandler(this.printToolStripButton_Click);
             // 
             // previewToolStripButton
@@ -500,22 +369,16 @@
             this.previewToolStripButton.AutoToolTip = false;
             this.previewToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.previewToolStripButton.Image = global::MissingPoster.Properties.Resources.PrintPreviewHS;
-            this.previewToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this.previewToolStripButton, "previewToolStripButton");
             this.previewToolStripButton.Name = "previewToolStripButton";
-            this.previewToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.previewToolStripButton.Text = "Print Preview";
-            this.previewToolStripButton.ToolTipText = "Print Preview the poster";
             this.previewToolStripButton.Click += new System.EventHandler(this.previewToolStripButton_Click);
             // 
             // imageToolStripButton
             // 
             this.imageToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.imageToolStripButton.Image = global::MissingPoster.Properties.Resources.picture;
-            this.imageToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this.imageToolStripButton, "imageToolStripButton");
             this.imageToolStripButton.Name = "imageToolStripButton";
-            this.imageToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.imageToolStripButton.Text = "Generate Image";
-            this.imageToolStripButton.ToolTipText = "Export poster as an image";
             this.imageToolStripButton.Click += new System.EventHandler(this.imageToolStripButton_Click);
             // 
             // pdfToolStripButton
@@ -523,11 +386,8 @@
             this.pdfToolStripButton.AutoToolTip = false;
             this.pdfToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.pdfToolStripButton.Image = global::MissingPoster.Properties.Resources.document_pdf;
-            this.pdfToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this.pdfToolStripButton, "pdfToolStripButton");
             this.pdfToolStripButton.Name = "pdfToolStripButton";
-            this.pdfToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.pdfToolStripButton.Text = "PDF Document";
-            this.pdfToolStripButton.ToolTipText = "Export poster as a PDF Document";
             this.pdfToolStripButton.Click += new System.EventHandler(this.pdfToolStripButton_Click);
             // 
             // wordToolStripButton
@@ -535,11 +395,8 @@
             this.wordToolStripButton.AutoToolTip = false;
             this.wordToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.wordToolStripButton.Image = global::MissingPoster.Properties.Resources.page_white_word;
-            this.wordToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this.wordToolStripButton, "wordToolStripButton");
             this.wordToolStripButton.Name = "wordToolStripButton";
-            this.wordToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.wordToolStripButton.Text = "Word Document";
-            this.wordToolStripButton.ToolTipText = "Export poster as a Microsoft Word Document";
             this.wordToolStripButton.Click += new System.EventHandler(this.wordToolStripButton_Click);
             // 
             // excelToolStripButton
@@ -547,64 +404,46 @@
             this.excelToolStripButton.AutoToolTip = false;
             this.excelToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.excelToolStripButton.Image = global::MissingPoster.Properties.Resources.page_white_excel;
-            this.excelToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this.excelToolStripButton, "excelToolStripButton");
             this.excelToolStripButton.Name = "excelToolStripButton";
-            this.excelToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.excelToolStripButton.Text = "Excel Spreadsheet";
-            this.excelToolStripButton.ToolTipText = "Generate a Microsoft Excel Spreadsheet";
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
+            resources.ApplyResources(this.toolStripSeparator, "toolStripSeparator");
             // 
             // cutToolStripButton
             // 
             this.cutToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.cutToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("cutToolStripButton.Image")));
-            this.cutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this.cutToolStripButton, "cutToolStripButton");
             this.cutToolStripButton.Name = "cutToolStripButton";
-            this.cutToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.cutToolStripButton.Text = "C&ut";
-            this.cutToolStripButton.ToolTipText = "Cut image";
             this.cutToolStripButton.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
             // 
             // copyToolStripButton
             // 
             this.copyToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.copyToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripButton.Image")));
-            this.copyToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this.copyToolStripButton, "copyToolStripButton");
             this.copyToolStripButton.Name = "copyToolStripButton";
-            this.copyToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.copyToolStripButton.Text = "&Copy";
-            this.copyToolStripButton.ToolTipText = "Copy image";
             this.copyToolStripButton.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // pasteToolStripButton
             // 
             this.pasteToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.pasteToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("pasteToolStripButton.Image")));
-            this.pasteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this.pasteToolStripButton, "pasteToolStripButton");
             this.pasteToolStripButton.Name = "pasteToolStripButton";
-            this.pasteToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.pasteToolStripButton.Text = "&Paste";
-            this.pasteToolStripButton.ToolTipText = "Paste image";
             this.pasteToolStripButton.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // helpToolStripButton
             // 
             this.helpToolStripButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.helpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.helpToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("helpToolStripButton.Image")));
-            this.helpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this.helpToolStripButton, "helpToolStripButton");
             this.helpToolStripButton.Name = "helpToolStripButton";
-            this.helpToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.helpToolStripButton.Text = "He&lp";
             this.helpToolStripButton.Click += new System.EventHandler(this.helpToolStripButton_Click);
             // 
             // configToolStripButton
@@ -612,40 +451,33 @@
             this.configToolStripButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.configToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.configToolStripButton.Image = global::MissingPoster.Properties.Resources.OptionsHS;
-            this.configToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this.configToolStripButton, "configToolStripButton");
             this.configToolStripButton.Name = "configToolStripButton";
-            this.configToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.configToolStripButton.Text = "Configuration";
             this.configToolStripButton.Click += new System.EventHandler(this.configToolStripButton_Click);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(45, 22);
-            this.toolStripLabel1.Text = "Report:";
+            resources.ApplyResources(this.toolStripLabel1, "toolStripLabel1");
             // 
             // chooseReportToolStripComboBox
             // 
             this.chooseReportToolStripComboBox.Name = "chooseReportToolStripComboBox";
-            this.chooseReportToolStripComboBox.Size = new System.Drawing.Size(121, 25);
-            this.chooseReportToolStripComboBox.ToolTipText = "Choose report to generate";
+            resources.ApplyResources(this.chooseReportToolStripComboBox, "chooseReportToolStripComboBox");
             // 
             // saveFileDialog
             // 
             this.saveFileDialog.DefaultExt = "*.xml";
-            this.saveFileDialog.Filter = "Wanted Poster XML|*.xml";
-            this.saveFileDialog.Title = "Save Wanted Poster";
+            resources.ApplyResources(this.saveFileDialog, "saveFileDialog");
             // 
             // openFileDialog
             // 
             this.openFileDialog.DefaultExt = "*.xml";
-            this.openFileDialog.Filter = "Wanted Poster XML|*.xml";
-            this.openFileDialog.Title = "Open Wanted Poster";
+            resources.ApplyResources(this.openFileDialog, "openFileDialog");
             // 
             // subjectGroupBox
             // 
-            this.subjectGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.subjectGroupBox, "subjectGroupBox");
             this.subjectGroupBox.Controls.Add(label1);
             this.subjectGroupBox.Controls.Add(this.sexComboBox);
             this.subjectGroupBox.Controls.Add(weightStringLabel);
@@ -662,59 +494,41 @@
             this.subjectGroupBox.Controls.Add(dOBLabel);
             this.subjectGroupBox.Controls.Add(this.dOBDateTimePicker);
             this.subjectGroupBox.Controls.Add(descriptionLabel);
-            this.subjectGroupBox.Location = new System.Drawing.Point(332, 64);
             this.subjectGroupBox.Name = "subjectGroupBox";
-            this.subjectGroupBox.Size = new System.Drawing.Size(379, 296);
-            this.subjectGroupBox.TabIndex = 23;
             this.subjectGroupBox.TabStop = false;
-            this.subjectGroupBox.Text = "Subject Information";
             // 
             // sexComboBox
             // 
             this.sexComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.wantedDataTypeBindingSource, "Sex", true));
             this.sexComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sexComboBox.FormattingEnabled = true;
-            this.sexComboBox.Location = new System.Drawing.Point(267, 120);
+            resources.ApplyResources(this.sexComboBox, "sexComboBox");
             this.sexComboBox.Name = "sexComboBox";
-            this.sexComboBox.Size = new System.Drawing.Size(102, 24);
-            this.sexComboBox.TabIndex = 17;
             this.sexComboBox.SelectedIndexChanged += new System.EventHandler(this.sexComboBox_SelectedIndexChanged);
             // 
             // weightStringTextBox
             // 
             this.weightStringTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.wantedDataTypeBindingSource, "WeightString", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.weightStringTextBox.Location = new System.Drawing.Point(83, 150);
+            resources.ApplyResources(this.weightStringTextBox, "weightStringTextBox");
             this.weightStringTextBox.Name = "weightStringTextBox";
-            this.weightStringTextBox.Size = new System.Drawing.Size(138, 23);
-            this.weightStringTextBox.TabIndex = 16;
-            this.toolTip.SetToolTip(this.weightStringTextBox, "Weight string: write the weight including the units you would like to use");
+            this.toolTip.SetToolTip(this.weightStringTextBox, resources.GetString("weightStringTextBox.ToolTip"));
             // 
             // heightStringTextBox
             // 
             this.heightStringTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.wantedDataTypeBindingSource, "HeightString", true));
-            this.heightStringTextBox.Location = new System.Drawing.Point(83, 121);
+            resources.ApplyResources(this.heightStringTextBox, "heightStringTextBox");
             this.heightStringTextBox.Name = "heightStringTextBox";
-            this.heightStringTextBox.Size = new System.Drawing.Size(138, 23);
-            this.heightStringTextBox.TabIndex = 15;
-            this.toolTip.SetToolTip(this.heightStringTextBox, "Height string: write the height including the units you would like to use");
+            this.toolTip.SetToolTip(this.heightStringTextBox, resources.GetString("heightStringTextBox.ToolTip"));
             // 
             // pictureBox
             // 
-            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.pictureBox, "pictureBox");
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox.ContextMenuStrip = this.imageContextMenuStrip;
             this.pictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.wantedDataTypeBindingSource, "Sex", true));
-            this.pictureBox.Location = new System.Drawing.Point(14, 63);
-            this.pictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(312, 296);
-            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox.TabIndex = 7;
             this.pictureBox.TabStop = false;
-            this.toolTip.SetToolTip(this.pictureBox, "Picture of the subject.\r\nYou can drag and drop an image to this form, \r\nor copy a" +
-        "nd paste from the clipboard.");
+            this.toolTip.SetToolTip(this.pictureBox, resources.GetString("pictureBox.ToolTip"));
             // 
             // imageContextMenuStrip
             // 
@@ -726,91 +540,73 @@
             this.toolStripSeparator2,
             this.browseToolStripMenuItem});
             this.imageContextMenuStrip.Name = "imageContextMenuStrip";
-            this.imageContextMenuStrip.Size = new System.Drawing.Size(145, 120);
+            resources.ApplyResources(this.imageContextMenuStrip, "imageContextMenuStrip");
             this.imageContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.imageContextMenuStrip_Opening);
             // 
             // cutToolStripMenuItem
             // 
             this.cutToolStripMenuItem.Image = global::MissingPoster.Properties.Resources.CutHS;
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-            this.cutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.cutToolStripMenuItem.Text = "Cut";
+            resources.ApplyResources(this.cutToolStripMenuItem, "cutToolStripMenuItem");
             this.cutToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
             // 
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Image = global::MissingPoster.Properties.Resources.CopyHS;
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.copyToolStripMenuItem.Text = "Copy";
+            resources.ApplyResources(this.copyToolStripMenuItem, "copyToolStripMenuItem");
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // pasteToolStripMenuItem
             // 
             this.pasteToolStripMenuItem.Image = global::MissingPoster.Properties.Resources.PasteHS;
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-            this.pasteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.pasteToolStripMenuItem.Text = "Paste";
+            resources.ApplyResources(this.pasteToolStripMenuItem, "pasteToolStripMenuItem");
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Image = global::MissingPoster.Properties.Resources.DeleteHS;
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.clearToolStripMenuItem.Text = "Clear";
+            resources.ApplyResources(this.clearToolStripMenuItem, "clearToolStripMenuItem");
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(141, 6);
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
             // 
             // browseToolStripMenuItem
             // 
             this.browseToolStripMenuItem.Name = "browseToolStripMenuItem";
-            this.browseToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.browseToolStripMenuItem.Text = "Browse...";
+            resources.ApplyResources(this.browseToolStripMenuItem, "browseToolStripMenuItem");
             this.browseToolStripMenuItem.Click += new System.EventHandler(this.browseButton_Click);
             // 
             // dateLastSeenDateTimePicker
             // 
-            this.dateLastSeenDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateLastSeenDateTimePicker.Location = new System.Drawing.Point(72, 51);
+            resources.ApplyResources(this.dateLastSeenDateTimePicker, "dateLastSeenDateTimePicker");
             this.dateLastSeenDateTimePicker.Name = "dateLastSeenDateTimePicker";
             this.dateLastSeenDateTimePicker.ShowCheckBox = true;
-            this.dateLastSeenDateTimePicker.Size = new System.Drawing.Size(160, 23);
-            this.dateLastSeenDateTimePicker.TabIndex = 19;
             this.dateLastSeenDateTimePicker.ValueChanged += new System.EventHandler(this.dateLastSeenDateTimePicker_ValueChanged);
             // 
             // lastSeenGroupBox
             // 
-            this.lastSeenGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.lastSeenGroupBox, "lastSeenGroupBox");
             this.lastSeenGroupBox.Controls.Add(this.timeLastSeenDateTimePicker);
             this.lastSeenGroupBox.Controls.Add(dateLastSeenLabel);
             this.lastSeenGroupBox.Controls.Add(this.pointLastSeenTextBox);
             this.lastSeenGroupBox.Controls.Add(this.dateLastSeenDateTimePicker);
             this.lastSeenGroupBox.Controls.Add(pointLastSeenLabel);
-            this.lastSeenGroupBox.Location = new System.Drawing.Point(332, 366);
             this.lastSeenGroupBox.Name = "lastSeenGroupBox";
-            this.lastSeenGroupBox.Size = new System.Drawing.Size(379, 128);
-            this.lastSeenGroupBox.TabIndex = 24;
             this.lastSeenGroupBox.TabStop = false;
-            this.lastSeenGroupBox.Text = "Last Seen";
             // 
             // timeLastSeenDateTimePicker
             // 
             this.timeLastSeenDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.timeLastSeenDateTimePicker.Location = new System.Drawing.Point(238, 52);
+            resources.ApplyResources(this.timeLastSeenDateTimePicker, "timeLastSeenDateTimePicker");
             this.timeLastSeenDateTimePicker.Name = "timeLastSeenDateTimePicker";
             this.timeLastSeenDateTimePicker.ShowCheckBox = true;
             this.timeLastSeenDateTimePicker.ShowUpDown = true;
-            this.timeLastSeenDateTimePicker.Size = new System.Drawing.Size(131, 23);
-            this.timeLastSeenDateTimePicker.TabIndex = 20;
             this.timeLastSeenDateTimePicker.ValueChanged += new System.EventHandler(this.timeLastSeenDateTimePicker_ValueChanged);
             // 
             // headerTypeBindingSource
@@ -826,9 +622,8 @@
             // MainForm
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 506);
             this.Controls.Add(this.lastSeenGroupBox);
             this.Controls.Add(this.subjectGroupBox);
             this.Controls.Add(this.toolStrip);
@@ -837,11 +632,8 @@
             this.Controls.Add(pathLabel);
             this.Controls.Add(this.pathTextBox);
             this.Controls.Add(this.browseButton);
-            this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainForm";
-            this.Text = "Missing Person";
+            this.WindowState = global::MissingPoster.Properties.Settings.Default.MainForm_WindowState;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);

@@ -21,5 +21,12 @@ namespace MissingPoster
         }
 
         public ReportViewer ReportViewer { get { return reportViewer; } }
+
+        private void ReportForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Escape)
+                this.Close();
+        }
+
     }
 }

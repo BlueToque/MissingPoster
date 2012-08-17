@@ -31,5 +31,23 @@ namespace MissingPoster.Properties {
                 return ((string)(this["ConfigFile"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
+        public global::System.Windows.Forms.FormWindowState MainForm_WindowState {
+            get {
+                return ((global::System.Windows.Forms.FormWindowState)(this["MainForm_WindowState"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
+        public global::System.Windows.Forms.FormWindowState ReportForm_WindowState {
+            get {
+                return ((global::System.Windows.Forms.FormWindowState)(this["ReportForm_WindowState"]));
+            }
+        }
     }
 }

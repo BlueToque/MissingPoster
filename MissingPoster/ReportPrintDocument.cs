@@ -183,5 +183,10 @@ namespace MissingPoster
             double inches = hundrethsOfInch / 100.0;
             return inches.ToString(CultureInfo.InvariantCulture) + "in";
         }
+
+        private void InitializeComponent()
+        {
+
+        }
     }
 }

@@ -46,6 +46,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.browseButton = new System.Windows.Forms.Button();
             this.pathTextBox = new System.Windows.Forms.TextBox();
+            this.wantedDataTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
             this.openImageFileDialog = new System.Windows.Forms.OpenFileDialog();
@@ -81,7 +82,7 @@
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.subjectGroupBox = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.sexComboBox = new System.Windows.Forms.ComboBox();
             this.weightStringTextBox = new System.Windows.Forms.TextBox();
             this.heightStringTextBox = new System.Windows.Forms.TextBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -97,7 +98,6 @@
             this.lastSeenGroupBox = new System.Windows.Forms.GroupBox();
             this.timeLastSeenDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.headerTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.wantedDataTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.imageTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             pathLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
@@ -113,6 +113,7 @@
             heightStringLabel = new System.Windows.Forms.Label();
             weightStringLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.wantedDataTypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ageNumericUpDown)).BeginInit();
             this.contactGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contactTypeBindingSource)).BeginInit();
@@ -122,7 +123,6 @@
             this.imageContextMenuStrip.SuspendLayout();
             this.lastSeenGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerTypeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wantedDataTypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageTypeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -277,6 +277,10 @@
             this.pathTextBox.Size = new System.Drawing.Size(517, 23);
             this.pathTextBox.TabIndex = 0;
             // 
+            // wantedDataTypeBindingSource
+            // 
+            this.wantedDataTypeBindingSource.DataSource = typeof(MissingPoster.WantedDataType);
+            // 
             // firstNameTextBox
             // 
             this.firstNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -329,6 +333,8 @@
             // 
             this.dOBDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dOBDateTimePicker.CustomFormat = "MMM dd yyyy";
+            this.dOBDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dOBDateTimePicker.Location = new System.Drawing.Point(83, 92);
             this.dOBDateTimePicker.Name = "dOBDateTimePicker";
             this.dOBDateTimePicker.ShowCheckBox = true;
@@ -641,7 +647,7 @@
             this.subjectGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subjectGroupBox.Controls.Add(label1);
-            this.subjectGroupBox.Controls.Add(this.comboBox1);
+            this.subjectGroupBox.Controls.Add(this.sexComboBox);
             this.subjectGroupBox.Controls.Add(weightStringLabel);
             this.subjectGroupBox.Controls.Add(this.weightStringTextBox);
             this.subjectGroupBox.Controls.Add(heightStringLabel);
@@ -663,16 +669,16 @@
             this.subjectGroupBox.TabStop = false;
             this.subjectGroupBox.Text = "Subject Information";
             // 
-            // comboBox1
+            // sexComboBox
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.wantedDataTypeBindingSource, "Sex", true));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(267, 120);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(102, 24);
-            this.comboBox1.TabIndex = 17;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.sexComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.wantedDataTypeBindingSource, "Sex", true));
+            this.sexComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sexComboBox.FormattingEnabled = true;
+            this.sexComboBox.Location = new System.Drawing.Point(267, 120);
+            this.sexComboBox.Name = "sexComboBox";
+            this.sexComboBox.Size = new System.Drawing.Size(102, 24);
+            this.sexComboBox.TabIndex = 17;
+            this.sexComboBox.SelectedIndexChanged += new System.EventHandler(this.sexComboBox_SelectedIndexChanged);
             // 
             // weightStringTextBox
             // 
@@ -812,14 +818,10 @@
             this.headerTypeBindingSource.DataMember = "Header";
             this.headerTypeBindingSource.DataSource = this.wantedDataTypeBindingSource;
             // 
-            // wantedDataTypeBindingSource
-            // 
-            this.wantedDataTypeBindingSource.DataSource = typeof(MissingPoster.WantedDataType);
-            // 
             // imageTypeBindingSource
             // 
             this.imageTypeBindingSource.DataMember = "Image";
-            this.imageTypeBindingSource.DataSource = typeof(MissingPoster.WantedDataType);
+            this.imageTypeBindingSource.DataSource = this.wantedDataTypeBindingSource;
             // 
             // MainForm
             // 
@@ -843,6 +845,7 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);
+            ((System.ComponentModel.ISupportInitialize)(this.wantedDataTypeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ageNumericUpDown)).EndInit();
             this.contactGroupBox.ResumeLayout(false);
             this.contactGroupBox.PerformLayout();
@@ -856,7 +859,6 @@
             this.lastSeenGroupBox.ResumeLayout(false);
             this.lastSeenGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerTypeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wantedDataTypeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageTypeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -919,7 +921,7 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripComboBox chooseReportToolStripComboBox;
         private System.Windows.Forms.ToolStripButton imageToolStripButton;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox sexComboBox;
     }
 }
 

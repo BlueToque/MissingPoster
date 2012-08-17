@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -139,7 +140,7 @@ namespace MissingPoster
             string[] items = Enum.GetNames(typeof(SexType));
             for (int i = 0; i < items.Length; i++)
                 if (items[i] == "Blank") items[i] = "";
-            comboBox1.Items.AddRange(items);
+            sexComboBox.Items.AddRange(items);
         }
 
         private void browseButton_Click(object sender, EventArgs e)
@@ -249,7 +250,10 @@ namespace MissingPoster
             {
                 m_wantedData.DOBSpecified = dOBDateTimePicker.Checked;
                 if (!m_wantedData.DOBSpecified)
+                {
+                    m_wantedData.DOB = DateTime.MinValue;
                     return;
+                }
                 m_wantedData.DOB = dOBDateTimePicker.Value;
                 m_wantedData.Age = Convert.ToUInt32((DateTime.Now - dOBDateTimePicker.Value).TotalDays / 365.2524);
             }
@@ -263,7 +267,10 @@ namespace MissingPoster
         {
             m_wantedData.DateLastSeenSpecified = dateLastSeenDateTimePicker.Checked;
             if (!m_wantedData.DateLastSeenSpecified)
+            {
+                m_wantedData.DateLastSeen = DateTime.MinValue;
                 return;
+            }
             m_wantedData.DateLastSeen = dateLastSeenDateTimePicker.Value;
 
         }
@@ -272,7 +279,10 @@ namespace MissingPoster
         {
             m_wantedData.TimeLastSeenSpecified = timeLastSeenDateTimePicker.Checked;
             if (!m_wantedData.TimeLastSeenSpecified)
+            {
+                m_wantedData.TimeLastSeen = DateTime.MinValue;
                 return;
+            }
             m_wantedData.TimeLastSeen = timeLastSeenDateTimePicker.Value;
 
         }
@@ -324,7 +334,7 @@ namespace MissingPoster
             DataBind();
         }
 
-        private void imageContextMenuStrip_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        private void imageContextMenuStrip_Opening(object sender, CancelEventArgs e)
         {
             // look into the clipboard and see if there's an image there
             pasteToolStripButton.Enabled = Clipboard.ContainsImage();
@@ -504,15 +514,15 @@ namespace MissingPoster
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void sexComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if((comboBox1.SelectedItem as string).IsNullOrEmpty())
+            if((sexComboBox.SelectedItem as string).IsNullOrEmpty())
             {
                 m_wantedData.SexSpecified=false;
                 return;
             }
             m_wantedData.SexSpecified=true;
-            m_wantedData.Sex=(SexType) Enum.Parse(typeof(SexType), comboBox1.SelectedItem as string);
+            m_wantedData.Sex=(SexType) Enum.Parse(typeof(SexType), sexComboBox.SelectedItem as string);
         }
 
     }

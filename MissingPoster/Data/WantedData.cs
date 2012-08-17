@@ -12,9 +12,13 @@ namespace MissingPoster
         public WantedDataType()
         {
             Image = new ImageType();
-            Header = Configuration.Instance.Header.Clone();
             Footer = new FooterType();
-            Contact = Configuration.Instance.Contact.Clone();
+            try
+            {
+                Header = Configuration.Instance.Header.Clone();
+                Contact = Configuration.Instance.Contact.Clone();
+            }
+            catch { }
 
             Created = DateTime.Now;
             CreatedBy = WindowsIdentity.GetCurrent().Name;
@@ -25,6 +29,12 @@ namespace MissingPoster
             Modified = DateTime.Now;
             ModifiedBy = WindowsIdentity.GetCurrent().Name;
             return base.OnPreSerialize();
+        }
+
+        public bool DOBValid
+        {
+            get { return this.DOBSpecified; }
+            set { this.DOBSpecified = value; }
         }
     }
 }

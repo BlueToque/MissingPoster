@@ -121,6 +121,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.pictureBox);
             this.groupBox1.Controls.Add(phoneNumberLabel);
             this.groupBox1.Controls.Add(this.phoneNumberTextBox);
@@ -130,7 +132,7 @@
             this.groupBox1.Controls.Add(this.nameTextBox);
             this.groupBox1.Location = new System.Drawing.Point(12, 118);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(353, 124);
+            this.groupBox1.Size = new System.Drawing.Size(484, 124);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agency";
@@ -138,9 +140,11 @@
             // pictureBox
             // 
             this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox.Location = new System.Drawing.Point(261, 20);
+            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox.Location = new System.Drawing.Point(392, 20);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(85, 85);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox.TabIndex = 6;
             this.pictureBox.TabStop = false;
             this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);
@@ -152,7 +156,7 @@
             this.phoneNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.headerTypeBindingSource, "PhoneNumber", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.phoneNumberTextBox.Location = new System.Drawing.Point(97, 71);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(157, 20);
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(288, 20);
             this.phoneNumberTextBox.TabIndex = 5;
             // 
             // headerTypeBindingSource
@@ -171,7 +175,7 @@
             this.emailAddressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.headerTypeBindingSource, "EmailAddress", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.emailAddressTextBox.Location = new System.Drawing.Point(97, 45);
             this.emailAddressTextBox.Name = "emailAddressTextBox";
-            this.emailAddressTextBox.Size = new System.Drawing.Size(157, 20);
+            this.emailAddressTextBox.Size = new System.Drawing.Size(288, 20);
             this.emailAddressTextBox.TabIndex = 3;
             // 
             // nameTextBox
@@ -181,7 +185,7 @@
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.headerTypeBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.nameTextBox.Location = new System.Drawing.Point(97, 19);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(157, 20);
+            this.nameTextBox.Size = new System.Drawing.Size(288, 20);
             this.nameTextBox.TabIndex = 1;
             // 
             // openImageFileDialog
@@ -192,6 +196,8 @@
             // 
             // contactGroupBox
             // 
+            this.contactGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.contactGroupBox.Controls.Add(phoneNumberLabel1);
             this.contactGroupBox.Controls.Add(this.phoneNumberTextBox1);
             this.contactGroupBox.Controls.Add(emailAddressLabel1);
@@ -200,7 +206,7 @@
             this.contactGroupBox.Controls.Add(this.nameTextBox1);
             this.contactGroupBox.Location = new System.Drawing.Point(12, 12);
             this.contactGroupBox.Name = "contactGroupBox";
-            this.contactGroupBox.Size = new System.Drawing.Size(354, 100);
+            this.contactGroupBox.Size = new System.Drawing.Size(484, 100);
             this.contactGroupBox.TabIndex = 1;
             this.contactGroupBox.TabStop = false;
             this.contactGroupBox.Text = "Contact";
@@ -212,7 +218,7 @@
             this.phoneNumberTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactTypeBindingSource, "PhoneNumber", true));
             this.phoneNumberTextBox1.Location = new System.Drawing.Point(97, 71);
             this.phoneNumberTextBox1.Name = "phoneNumberTextBox1";
-            this.phoneNumberTextBox1.Size = new System.Drawing.Size(250, 20);
+            this.phoneNumberTextBox1.Size = new System.Drawing.Size(380, 20);
             this.phoneNumberTextBox1.TabIndex = 5;
             // 
             // contactTypeBindingSource
@@ -227,7 +233,7 @@
             this.emailAddressTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactTypeBindingSource, "EmailAddress", true));
             this.emailAddressTextBox1.Location = new System.Drawing.Point(97, 45);
             this.emailAddressTextBox1.Name = "emailAddressTextBox1";
-            this.emailAddressTextBox1.Size = new System.Drawing.Size(250, 20);
+            this.emailAddressTextBox1.Size = new System.Drawing.Size(380, 20);
             this.emailAddressTextBox1.TabIndex = 3;
             // 
             // nameTextBox1
@@ -237,14 +243,14 @@
             this.nameTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactTypeBindingSource, "Name", true));
             this.nameTextBox1.Location = new System.Drawing.Point(97, 19);
             this.nameTextBox1.Name = "nameTextBox1";
-            this.nameTextBox1.Size = new System.Drawing.Size(250, 20);
+            this.nameTextBox1.Size = new System.Drawing.Size(380, 20);
             this.nameTextBox1.TabIndex = 1;
             // 
             // okButton
             // 
             this.okButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.okButton.Location = new System.Drawing.Point(110, 253);
+            this.okButton.Location = new System.Drawing.Point(176, 253);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(75, 23);
             this.okButton.TabIndex = 2;
@@ -256,7 +262,7 @@
             // 
             this.cancelButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(191, 253);
+            this.cancelButton.Location = new System.Drawing.Point(257, 253);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.TabIndex = 3;
@@ -270,7 +276,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(377, 288);
+            this.ClientSize = new System.Drawing.Size(508, 288);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.contactGroupBox);

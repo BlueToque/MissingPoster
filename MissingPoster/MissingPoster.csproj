@@ -164,7 +164,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configuration.xml" />
+    <Content Include="Data\Configuration.xml" />
     <None Include="Data\Configuration.Generated.xml">
       <DependentUpon>Configuration.xsd</DependentUpon>
     </None>

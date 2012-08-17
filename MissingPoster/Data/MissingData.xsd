@@ -61,11 +61,11 @@
 
   <xs:simpleType name="SexType">
     <xs:restriction base="xs:string">
+      <xs:enumeration value="Blank" />
       <xs:enumeration value="Female" />
       <xs:enumeration value="Male" />
       <xs:enumeration value="Unknown" />
       <xs:enumeration value="Other" />
-      <xs:enumeration value="Blank" />
     </xs:restriction>
   </xs:simpleType>
 

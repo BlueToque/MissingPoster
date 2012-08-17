@@ -519,10 +519,16 @@ namespace MissingPoster
             if((sexComboBox.SelectedItem as string).IsNullOrEmpty())
             {
                 m_wantedData.SexSpecified=false;
+                m_wantedData.Sex = SexType.Blank;
                 return;
             }
             m_wantedData.SexSpecified=true;
             m_wantedData.Sex=(SexType) Enum.Parse(typeof(SexType), sexComboBox.SelectedItem as string);
+        }
+
+        private void applyFooterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            m_wantedData.Header = Configuration.Instance.Header.Clone();
         }
 
     }

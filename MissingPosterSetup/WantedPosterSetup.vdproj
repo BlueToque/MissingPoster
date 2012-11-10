@@ -76,19 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_65A7C9C76AF0DBE29244C111351AE7C3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8F93539B31CA410098C3BC9A46521823"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A8CDE3A6CB7CE301E6B58EA45F727389"
+        "OwnerKey" = "8:_24E6DEF0B8649CAE0BF3E7AAFBCC3DD7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -100,7 +88,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_24E6DEF0B8649CAE0BF3E7AAFBCC3DD7"
+        "OwnerKey" = "8:_A8CDE3A6CB7CE301E6B58EA45F727389"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_8F93539B31CA410098C3BC9A46521823"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_65A7C9C76AF0DBE29244C111351AE7C3"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -220,11 +220,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_24E6DEF0B8649CAE0BF3E7AAFBCC3DD7"
-                    {
-                    "Name" = "8:Microsoft.ReportViewer.Common.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.ReportViewer.Common.dll"
             "TargetName" = "8:"
@@ -313,11 +308,6 @@
             "AssemblyAsmDisplayName" = "8:BlueToque.Utility, Version=1.2.0.1, Culture=neutral, PublicKeyToken=545b5d548687123f, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_A8CDE3A6CB7CE301E6B58EA45F727389"
-                    {
-                    "Name" = "8:BlueToque.Utility.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:BlueToque.Utility.dll"
             "TargetName" = "8:"
@@ -344,11 +334,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_D811614525A911633976E67718AD4C66"
-                    {
-                    "Name" = "8:Microsoft.ReportViewer.WinForms.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.ReportViewer.WinForms.dll"
             "TargetName" = "8:"
@@ -435,15 +420,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Missing Poster"
-        "ProductCode" = "8:{E979A24E-A183-4F0E-8E99-1783CE97B131}"
-        "PackageCode" = "8:{E01A8DAE-8669-4145-A60B-CBE7DF010420}"
+        "ProductCode" = "8:{F7FAD117-87DA-48B4-B1A6-8AEFA25E555D}"
+        "PackageCode" = "8:{85458796-C6EC-43BE-83E1-589D8B11CC32}"
         "UpgradeCode" = "8:{7D95067A-A099-484F-81B0-BD9DD04ED473}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:Blue Toque Software"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -1055,7 +1040,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8F93539B31CA410098C3BC9A46521823"
             {
-            "SourcePath" = "8:..\\WantedPoster\\obj\\x86\\Debug\\MissingPoster.exe"
+            "SourcePath" = "8:..\\MissingPoster\\obj\\x86\\Debug\\MissingPoster.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_905003A926F84D5EBCB9AE720E7E160A"

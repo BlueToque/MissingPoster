@@ -963,7 +963,7 @@
         <DataSetName>WantedData</DataSetName>
         <Top>0.69444in</Top>
         <Left>12.71254cm</Left>
-        <Height>5.62499in</Height>
+        <Height>5.625in</Height>
         <Width>4.93416in</Width>
         <ZIndex>1</ZIndex>
         <Style>
@@ -973,7 +973,7 @@
           <FontSize>12pt</FontSize>
         </Style>
       </Tablix>
-      <Image Name="MissingPersonImage2">
+      <Image Name="MissingPersonImage">
         <Source>Database</Source>
         <Value>=First(Fields!ImageBytes.Value, "ImageDataSet")</Value>
         <MIMEType>image/jpeg</MIMEType>
@@ -1187,7 +1187,6 @@
           <Value>=First(Fields!ImageBytes.Value, "HeaderDataSet")</Value>
           <MIMEType>image/jpeg</MIMEType>
           <Sizing>FitProportional</Sizing>
-          <Top>0in</Top>
           <Height>0.5in</Height>
           <Width>0.5in</Width>
           <Style>

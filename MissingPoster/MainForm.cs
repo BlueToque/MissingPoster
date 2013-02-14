@@ -9,6 +9,7 @@ using System.Linq;
 using System.Windows.Forms;
 using BlueToque.Utility;
 using Microsoft.Reporting.WinForms;
+using System.Xml.Linq;
 
 namespace MissingPoster
 {
@@ -21,10 +22,8 @@ namespace MissingPoster
         }
 
         WantedDataType m_wantedData = new WantedDataType();
+        
         string m_fileName = string.Empty;
-
-        // supported image file formats
-        List<string> imageFileFormats = new List<string>() { ".png", ".jpg", ".gif", ".bmp", ".wmf" };
 
         #region private methods
 
@@ -64,55 +63,6 @@ namespace MissingPoster
                 this.Text = string.Format("Missing Poster: New Poster");
             else
                 this.Text = string.Format("Missing Poster: {0}", Path.GetFileNameWithoutExtension(m_fileName));
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="reportViewer"></param>
-        /// <param name="fileName"></param>
-        /// <param name="format">"Excel", "PDF", "Word", "Image"</param>
-        private void RenderReport(ReportViewer reportViewer, string fileName, string format)
-        {
-            Warning[] warnings;
-            string[] streamids;
-            string mimeType;
-            string encoding;
-            string filenameExtension;
-
-            byte[] bytes = reportViewer.LocalReport.Render(
-                format,
-                null,
-                out mimeType,
-                out encoding,
-                out filenameExtension,
-                out streamids,
-                out warnings);
-
-            string ext = Path.GetExtension(fileName).ToLower();
-            if (imageFileFormats.Contains(ext))
-                ExportImage(fileName, bytes);
-            else
-                using (FileStream fs = new FileStream(fileName, FileMode.Create))
-                    fs.Write(bytes, 0, bytes.Length);
-
-        }
-
-        private void ExportImage(string fileName, byte[] bytes)
-        {
-            string ext = Path.GetExtension(fileName).ToLower();
-
-            Image image = Image.FromStream(new MemoryStream(bytes));
-            switch (ext)
-            {
-                case ".bmp": image.Save(fileName, ImageFormat.Bmp); break;
-                case ".jpg": image.Save(fileName, ImageFormat.Jpeg); break;
-                case ".png": image.Save(fileName, ImageFormat.Png); break;
-                case ".wmf": image.Save(fileName, ImageFormat.Wmf); break;
-                case ".gif": image.Save(fileName, ImageFormat.Gif); break;
-                default: MessageBox.Show(this, "Unable to export to selected format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); break;
-            }
-
         }
 
         #endregion
@@ -365,7 +315,7 @@ namespace MissingPoster
                 Cursor = Cursors.WaitCursor;
 
                 ReportViewer reportViewer = new ReportForm(m_wantedData, SelectedReport).ReportViewer;
-                RenderReport(reportViewer, sfd.FileName, "PDF");
+                Renderer.RenderReport(reportViewer, sfd.FileName, "PDF");
 
             }
             catch (Exception ex)
@@ -401,12 +351,17 @@ namespace MissingPoster
                 Cursor = Cursors.WaitCursor;
 
                 ReportViewer reportViewer = new ReportForm(m_wantedData, SelectedReport).ReportViewer;
-                RenderReport(reportViewer, sfd.FileName, "Word");
+                Renderer.RenderReport(reportViewer, sfd.FileName, "Word");
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(this, string.Format("Error:\r\n{0}", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(
+                    this, 
+                    string.Format("Error:\r\n{0}", ex.Message), 
+                    "Error", 
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Error);
                 Trace.TraceError("Error:\r\n{0}", ex);
             }
             finally
@@ -438,7 +393,7 @@ namespace MissingPoster
                 Cursor = Cursors.WaitCursor;
 
                 ReportViewer reportViewer = new ReportForm(m_wantedData, SelectedReport).ReportViewer;
-                RenderReport(reportViewer, sfd.FileName, "Image");
+                Renderer.RenderReport(reportViewer, sfd.FileName, "Image");
 
             }
             catch (Exception ex)
@@ -483,7 +438,7 @@ namespace MissingPoster
                 return;
 
             string ext = Path.GetExtension(files[0]).ToLower();
-            if (!imageFileFormats.Contains(ext))
+            if (!Renderer.s_imageFileFormats.Contains(ext))
                 return;
             e.Effect = DragDropEffects.Move;
             
@@ -502,7 +457,7 @@ namespace MissingPoster
                 return;
 
             string ext = Path.GetExtension(files[0]).ToLower();
-            if (!imageFileFormats.Contains(ext))
+            if (!Renderer.s_imageFileFormats.Contains(ext))
                 return;
 
             m_wantedData.Image = new ImageType()

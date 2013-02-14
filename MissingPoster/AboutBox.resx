@@ -473,13 +473,13 @@
     <value>140, 104</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 13</value>
+    <value>171, 13</value>
   </data>
   <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
   <data name="linkLabel1.Text" xml:space="preserve">
-    <value> http://www.bluetoque.ca/products/MissingPoster/</value>
+    <value> http://MissingPoster.bluetoque.ca</value>
   </data>
   <data name="&gt;&gt;linkLabel1.Name" xml:space="preserve">
     <value>linkLabel1</value>

@@ -288,6 +288,7 @@
             resources.ApplyResources(this.pointLastSeenTextBox, "pointLastSeenTextBox");
             this.pointLastSeenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.wantedDataTypeBindingSource, "PointLastSeen", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.pointLastSeenTextBox.Name = "pointLastSeenTextBox";
+            this.toolTip.SetToolTip(this.pointLastSeenTextBox, resources.GetString("pointLastSeenTextBox.ToolTip"));
             // 
             // contactGroupBox
             // 
@@ -306,6 +307,7 @@
             resources.ApplyResources(this.phoneNumberTextBox, "phoneNumberTextBox");
             this.phoneNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactTypeBindingSource, "PhoneNumber", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
+            this.toolTip.SetToolTip(this.phoneNumberTextBox, resources.GetString("phoneNumberTextBox.ToolTip"));
             // 
             // contactTypeBindingSource
             // 
@@ -317,12 +319,14 @@
             resources.ApplyResources(this.emailAddressTextBox, "emailAddressTextBox");
             this.emailAddressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactTypeBindingSource, "EmailAddress", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.emailAddressTextBox.Name = "emailAddressTextBox";
+            this.toolTip.SetToolTip(this.emailAddressTextBox, resources.GetString("emailAddressTextBox.ToolTip"));
             // 
             // nameTextBox
             // 
             resources.ApplyResources(this.nameTextBox, "nameTextBox");
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactTypeBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.nameTextBox.Name = "nameTextBox";
+            this.toolTip.SetToolTip(this.nameTextBox, resources.GetString("nameTextBox.ToolTip"));
             // 
             // toolStrip
             // 

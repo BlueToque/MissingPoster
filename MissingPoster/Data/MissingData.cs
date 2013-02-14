@@ -4,7 +4,9 @@ using BlueToque.Utility;
 
 namespace MissingPoster
 {
-    public partial class WantedDataType : Serializable<WantedDataType>
+    public partial class WantedDataType : 
+        Serializable<WantedDataType>,
+        ICloneable
     {
         /// <summary>
         /// Create tje wanted data type
@@ -36,5 +38,6 @@ namespace MissingPoster
             get { return this.DOBSpecified; }
             set { this.DOBSpecified = value; }
         }
+
     }
 }
